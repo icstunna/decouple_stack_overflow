@@ -20,15 +20,17 @@ ActiveRecord::Schema.define(version: 20150410192612) do
     t.integer  "question_id"
     t.string   "title"
     t.string   "content"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "vote_count",  default: 0
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "questions", force: :cascade do |t|
     t.string   "title"
     t.string   "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "vote_count", default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

@@ -4,6 +4,7 @@ class CreateAnswers < ActiveRecord::Migration
       t.belongs_to :question
       t.string :title
       t.string :content
+      t.integer :vote_count, default: 0
 
       t.timestamps null: false
     end
