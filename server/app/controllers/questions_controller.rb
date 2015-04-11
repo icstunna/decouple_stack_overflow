@@ -12,6 +12,11 @@ class QuestionsController < ApplicationController
     render :json => {id: @question.id, title: @question.title, content: @question.content, vote_count: @question.vote_count}
   end
 
+  def show
+    @question = Question.find(params[:id])
+    render :json => {id: @question.id, title: @question.title, content: @question.content, vote_count: @question.vote_count}
+  end
+
   private
 
   def allow_cross_domain
